@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Conduit</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+<body>
+
+  <script>
+    const he =100;
+    const w = 400;
+    const ds; //global variable for data
+
+    d3.csv("data/MonthlyDeposits.csv", function(error, data){
+      if(error){
+        console.log("ERROR from Heather: ", error);
+      }else {
+        console.log("DATA from heather", data);
+        ds = data;
+      }
+    })
+
+  </script>
+</body>
+</html>
